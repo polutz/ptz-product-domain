@@ -1,0 +1,9 @@
+{
+  "generator-ptz-domain": {
+    "promptValues": {
+      "appname": "ptz-product-domain",
+      "githubAuthor": "polutz",
+      "codecovToken": "80033d8d-31e4-4010-b9ac-9f3badc7911b"
+    }
+  }
+}
