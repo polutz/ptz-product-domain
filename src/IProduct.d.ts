@@ -1,6 +1,6 @@
-import { IEntityBase, IEntityBaseArgs } from './IEntityBase';
+import { IEntityBase, IEntityBaseArgs } from 'ptz-core-domain';
 
-export interface IProduct extends IEntityBase {
+export interface IProduct extends IEntityBase<IProduct> {
     name: string;
     price: number;
     category: string;
@@ -8,7 +8,7 @@ export interface IProduct extends IEntityBase {
     update(product: IProduct): IProduct;
 }
 
-export interface IProductArgs extends IEntityBaseArgs {
+export interface IProductArgs extends IEntityBaseArgs<IProductArgs> {
     name: string;
     price: number;
     category: string;

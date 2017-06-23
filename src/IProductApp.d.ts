@@ -1,19 +1,18 @@
-import { ICreatedBy } from 'ptz-core-domain';
+import { IAppFuncArgs, ICreatedBy } from 'ptz-core-domain';
 import { ILog } from 'ptz-log';
 import { IError } from 'ptz-validations';
-import { IAppFuncArgs } from './IAppFuncArgs';
 import { IProduct, IProductArgs } from './IProduct';
 import { IProductRepository } from './IProductRepository';
 
-export interface ISaveProductArgs extends IAppFuncArgs {
+export interface ISaveProductArgs extends IAppFuncArgs<ISaveProductArgs> {
     productArgs: IProductArgs;
 }
 
-export interface IDeleteProductArgs extends IAppFuncArgs {
+export interface IDeleteProductArgs extends IAppFuncArgs<IDeleteProductArgs> {
     id: string;
 }
 
-export interface IFindProductsArgs extends IAppFuncArgs {
+export interface IFindProductsArgs extends IAppFuncArgs<IFindProductsArgs> {
     query: any;
     options: { limit: number };
 }
