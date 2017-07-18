@@ -40,7 +40,7 @@ describe('createProduct', function () {
         it('Add error when minLength name', function () {
             var product = Product.createProduct({ name: 'a', price: validPrice, category: validCategory });
             assert.containsFind(product.errors, function (e) {
-                return e.propName === 'name' && e.errorMsg === V.allErrors.MIN_LENGTH;
+                return e.propName === 'name' && e.errorMsg === V.allErrors.MIN;
             });
         });
         it('Add error when maxLength name', function () {
@@ -49,7 +49,7 @@ describe('createProduct', function () {
                 price: 0, category: ''
             });
             assert.containsFind(product.errors, function (e) {
-                return e.propName === 'name' && e.errorMsg === V.allErrors.MAX_LENGTH;
+                return e.propName === 'name' && e.errorMsg === V.allErrors.MAX;
             });
         });
         it('Should be lowercase', function () {
@@ -117,7 +117,7 @@ describe('createProduct', function () {
         it('Add error when minLength category', function () {
             var product = Product.createProduct({ name: validName, price: validPrice, category: 'a' });
             assert.containsFind(product.errors, function (e) {
-                return e.propName === 'category' && e.errorMsg === V.allErrors.MIN_LENGTH;
+                return e.propName === 'category' && e.errorMsg === V.allErrors.MIN;
             });
         });
         it('Add error when maxLength category', function () {
@@ -127,7 +127,7 @@ describe('createProduct', function () {
                 category: 'labalblhblhbohblabcascjbascijbascjbasclasbclasbash'
             });
             assert.containsFind(product.errors, function (e) {
-                return e.propName === 'category' && e.errorMsg === V.allErrors.MAX_LENGTH;
+                return e.propName === 'category' && e.errorMsg === V.allErrors.MAX;
             });
         });
         it('Should be lowercase', function () {

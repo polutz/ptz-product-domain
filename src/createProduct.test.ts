@@ -29,7 +29,7 @@ describe('createProduct', () => {
         it('Add error when minLength name', () => {
             const product = Product.createProduct({ name: 'a', price: validPrice, category: validCategory });
             assert.containsFind(product.errors, e => e.propName === 'name'
-                && e.errorMsg === V.allErrors.MIN_LENGTH);
+                && e.errorMsg === V.allErrors.MIN);
         });
 
         it('Add error when maxLength name', () => {
@@ -38,7 +38,7 @@ describe('createProduct', () => {
                 price: 0, category: ''
             });
             assert.containsFind(product.errors, e => e.propName === 'name'
-                && e.errorMsg === V.allErrors.MAX_LENGTH);
+                && e.errorMsg === V.allErrors.MAX);
         });
 
         it('Should be lowercase', () => {
@@ -110,7 +110,7 @@ describe('createProduct', () => {
         it('Add error when minLength category', () => {
             const product = Product.createProduct({ name: validName, price: validPrice, category: 'a' });
             assert.containsFind(product.errors, e => e.propName === 'category'
-                && e.errorMsg === V.allErrors.MIN_LENGTH);
+                && e.errorMsg === V.allErrors.MIN);
         });
 
         it('Add error when maxLength category', () => {
@@ -120,7 +120,7 @@ describe('createProduct', () => {
                 category: 'labalblhblhbohblabcascjbascijbascjbasclasbclasbash'
             });
             assert.containsFind(product.errors, e => e.propName === 'category'
-                && e.errorMsg === V.allErrors.MAX_LENGTH);
+                && e.errorMsg === V.allErrors.MAX);
         });
 
         it('Should be lowercase', () => {

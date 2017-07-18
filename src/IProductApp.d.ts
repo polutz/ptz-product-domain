@@ -1,4 +1,4 @@
-import { IAppFuncArgs, ICreatedBy } from 'ptz-core-domain';
+import { IAppFuncArgs, ICreatedBy } from '@alanmarcell/ptz-core-domain';
 import { ILog } from 'ptz-log';
 import { IError } from 'ptz-validations';
 import { IProduct, IProductArgs } from './IProduct';
